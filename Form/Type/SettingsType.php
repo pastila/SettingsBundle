@@ -41,7 +41,7 @@ class SettingsType extends AbstractType
                         if (class_exists($class)) {
                             $constraints[] = new $class($constraintOptions);
                         } else {
-                            throw new SettingsException(sprintf('Constraint class "%s" not found', $class));
+                            throw new \Exception(sprintf('Constraint class "%s" not found', $class));
                         }
                     }
 
